@@ -1,0 +1,822 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;400&family=Montserrat:wght@500&family=Poppins:wght@200&family=Roboto:wght@300;400&display=swap');
+
+:root {
+    --blanco-bg: #F2F2F2;
+    --verde-oscuro: #2A4026;
+    --verde-mate: #59734D;
+    --verde-claro: #798C65;
+    --verde-gris: #B4BFA3;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.p1{
+    padding: 40px 80px;
+}
+
+.m1{
+    margin: 60px 0;
+}
+
+
+.selector-for-some-widget {
+    box-sizing: content-box;
+}
+
+body {
+    font-family: 'Barlow', sans-serif;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--blanco-bg);
+    font-weight: 300;
+}
+
+li {
+    list-style: none;
+}
+
+#contenedor__hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('./rooms-img/hero-hab.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 85vh;
+    padding: 1rem 2rem;
+}
+
+#contenedor__hero h1{
+    color: var(--blanco-bg);
+    font-weight: 400;
+    font-size: 4rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#contenedor__hero p{
+    color: var(--blanco-bg);
+}
+
+#contenedor_habitaciones{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 80px;
+}
+
+.habitacion_texto{
+    display: flex;  
+    justify-content: center;
+    flex-direction: column;
+    width: 35%;
+    text-align: center;
+}
+
+.habitacion_texto h2{
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.habitacion_texto p{
+    font-size: 1.3rem;
+}
+
+.habitacion_cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 65%;
+    height: 450px;
+    gap: 40px;
+}
+
+.hab_card{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-right: 10px;
+    height: 100%;
+    position: relative;
+}
+
+.hab_card .hab_img{
+    display: flex;
+    max-width: 300px;
+    height: 300px;
+}
+
+.hab_card .hab_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hab_card span{
+    font-size: 1.3rem;
+}
+
+.hab_card p{
+  margin-right: 45px;
+}
+
+.hab_card a{
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: black;
+    font-weight: 400;
+}
+
+.hab_card a::after{
+    content: '';
+    visibility: hidden;
+    width: 0px;
+    height: 2px;
+    background-color: var(--verde-mate);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width .2s ease-in-out;
+}
+
+.hab_card a:hover:after{
+    display: block;
+    visibility: visible;
+    width: 80px;
+}
+
+                                    /*habitaciones individuales*/
+
+#hero_individual{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.35)), url('./hab1/hab1-img/hab1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#hero_individual.segunda{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.35)), url('./hab2/hab2-img/hab2.jpg');
+}
+
+#hero_individual.tercera{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.35)), url('./hab3/hab3-img/hab3.jpg');
+}
+
+.logo_contenedor {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+.logo_contenedor a{
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 200;
+    color: var(--blanco-bg);
+}
+
+#hero_individual h1, 
+#hero_individual p{
+    color: var(--blanco-bg);
+    margin-left: 10rem;
+}
+
+#hero_individual h1{
+    font-size: 5rem;
+}
+
+#hero_individual p{
+    font-size: 1rem;
+}
+
+#habitacion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--verde-oscuro);
+    margin: 0 8rem;
+}
+
+.info_habitacion{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: -100px;
+    width: 900px;
+    height: 300px;
+    background-color: var(--blanco-bg);
+}
+
+.info_habitacion h3{
+    margin-top: 15px;
+    font-weight: 800;
+}
+
+.info_habitacion table{
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+    margin-top: 20px;
+}
+
+.info_habitacion table td{
+    width: 100px;
+    text-align: center;
+}
+
+.info_habitacion table thead td{
+    font-size: 1.2rem;
+    padding: 5px 15px 0 15px;
+    font-weight: 600;
+}
+
+.info_habitacion table tbody tr td{
+    padding: 2px;
+}
+
+.info_habitacion table tbody td{
+    font-size: 1rem;
+}
+
+.info_habitacion h4{
+    font-size: 1.2rem;
+    font-weight: 600;
+    position: absolute;
+    left: 10%;
+    top: 60%;
+}
+
+.comodidades{
+    position: absolute;
+    left: 10%;
+    top: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.comodidades .material-symbols-outlined{
+    margin-right: 5px;
+}
+
+.comodidades h5{
+    margin-right: 40px;
+    font-size: 1.1rem;
+}
+
+.comodidades .btn{
+    margin-left: 85px;
+}
+
+.btn-mobile{
+    display: none;
+}
+
+#hab_img_contenedor{
+    display: flex;
+    margin: 3rem 8rem;
+    position: relative;
+    top: 0;
+}
+
+.hab_img-derecha{
+    display: flex;
+    /*align-items: left;*/
+    width: 70%;
+    flex-direction: column;
+}
+
+.hab_img-derecha img{
+    width: 80%;
+}
+
+.hab_img-derecha p{
+    text-align: left;
+    font-size: 1.7rem;
+    font-weight: 300;
+    margin-bottom: 15px;
+    margin-right: 5%;
+
+}
+
+.hab_img-derecha strong{
+    margin: 45px 10px;
+    font-size: 3.6rem;
+    color: var(--verde-oscuro);
+    text-align: end;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+
+}
+
+.hab_img-fixed{
+    position: sticky;
+    top: 60px;
+    right: 0;
+    transition: top 0.4s ease-in;
+    height: 60%;
+    width: 25%;
+    margin-left: 5%;
+    margin-bottom: 8%;
+    padding: 5px;
+}
+
+
+.hab_img-fixed span{
+    font-size: 4rem;
+}
+
+#otras_hab{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#otras_hab h3{
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.cards_contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    margin-top: 30px;
+}
+
+.btn{
+    background-color: var(--verde-mate);
+    color: var(--blanco-bg);
+}
+
+/*footer*/
+
+.footer-contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    margin-top: 50px;
+    background-color: var(--verde-mate);
+}
+
+.footer-contenedor .logo {
+    font-size: 3rem;
+}
+
+.enlaces {
+    margin: 0 45px;
+    padding: 0;
+}
+
+.enlaces h2 {
+    font-size: 1.2rem;
+    color: var(--blanco-bg);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.enlaces ul{
+    padding: 0;
+}
+
+.enlaces ul li {
+    margin-bottom: 8px;
+}
+
+.enlaces li a:hover {
+    color: #fff;
+}
+
+.enlaces .redes {
+    color: var(--blanco-bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 1rem;
+    margin-bottom: 75px;
+}
+
+.enlaces .redes li {
+    cursor: pointer;
+}
+
+
+                                                /*MEDIAS*/
+
+/* Medium devices (tablets, 768px and up)*/
+@media (max-width: 1023px) {
+
+     .p1{
+        padding: 20px;
+    }
+
+    .m1{
+        margin: 40px 0;
+    }
+
+    .logo_contenedor a {
+        font-size: 2.1rem;
+    }
+
+    #contenedor__hero p {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    #contenedor_habitaciones {
+    flex-direction: column;
+    gap: 60px;
+    }
+
+    .habitacion_texto {
+    width: 100%;
+    }
+
+    .habitacion_cards {
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        gap: 40px;
+    }
+
+    .footer-contenedor {
+        padding: 25px;
+    }
+
+    .footer-contenedor .logo {
+        font-size: 2rem;
+    }
+
+    .footer-contenedor .logo:hover{
+        color: var(--blanco-bg);
+     }
+
+    .enlaces {
+        margin: 0 25px;
+        padding: 0;
+    }
+
+    /*habitaciones individuales*/
+    
+    #hero_individual h1 {
+        font-size: 6rem;
+    }
+
+    #hero_individual p {
+        font-size: 1.5rem;
+    }
+
+    #hero_individual h1, #hero_individual p {
+        margin-left: 5rem;
+    }
+
+    #habitacion {
+    margin: 0 2rem;
+    flex-direction: column;
+    }
+
+    .info_habitacion {
+    width: 100%;
+    }
+
+    .comodidades .btn {
+        display: none;
+        margin-left: 0;
+    }
+
+    .btn-mobile{
+        display: flex;
+        margin-bottom: 45px;
+        padding: 1rem 3rem;
+        font-size: 1.3rem;
+    }
+
+    .btn-mobile:hover{
+        color: var(--verde-oscuro);
+        background-color: var(--blanco-bg);
+    }
+
+    #hab_img_contenedor {
+        display: flex;
+        margin: 3rem;
+        position: relative;
+        top: 0;
+        flex-direction: column;
+    }
+
+    .hab_img-derecha {
+        width: 100%;
+        flex-direction: column;
+        margin-top: 20%;
+    }
+
+    .hab_img-derecha strong {
+        text-align: start;
+        font-size: 3rem;
+        text-transform: uppercase;
+        margin: 9px 0px;;
+    }
+
+    .hab_img-fixed {
+        position: absolute;
+        top: 0;
+        height: 0;
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .hab_img-fixed span{
+        font-size: 3rem;
+    }
+
+
+    .cards_contenedor {
+        gap: 28px;
+    }
+
+    .cards_contenedor .card {
+    width: 22rem!important;
+    }
+
+}
+
+/* media query for mobile devices */
+@media (max-width: 767px){
+    .p1{
+        padding: 20px;
+    }
+
+    .m1{
+        margin: 40px 0;
+    }
+
+    .logo_contenedor a {
+        font-size: 1.5rem;
+    }
+
+    #contenedor__hero h1 {
+        font-size: 2rem;
+    }
+
+    #contenedor__hero p {
+    font-size: 10px;
+    }
+
+    #contenedor_habitaciones {
+    flex-direction: column;
+    justify-content: center;
+    }
+
+    .habitacion_texto {
+        width: 100%;
+    }
+
+    .habitacion_texto h2 {
+        font-size: 2rem;
+    }
+
+    .habitacion_texto p {
+        font-size: 1rem;
+    }
+
+    .habitacion_cards {
+        width: 100%;
+        height: 100%;
+        gap: 40px;
+        flex-direction: column;
+    }
+
+    .hab_card {
+        margin-right: 0px;
+    }
+
+    .footer-contenedor {
+        padding: 25px;
+        margin-top: 50px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-contenedor .logo {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .enlaces {
+        margin: 0px;
+        padding: 0;
+    }
+
+    /*habitaciones individuales*/
+
+    #hero_individual {
+       
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.35)), url('./hab1/hab1-img/hab1.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    #hero_individual.segunda{
+        background-position: revert;
+    }
+    
+
+    #hero_individual h1 {
+        font-size: 2rem;
+    }
+
+     #hero_individual p {
+        font-size: 1.2rem;
+    }
+
+    #hero_individual h1, #hero_individual p {
+    color: var(--blanco-bg);
+    margin-left: 1rem;
+    }
+
+    .logo_contenedor {
+        left: 5%;
+    }
+
+    .logo_contenedor a {
+        font-size: 1rem;
+    }
+    
+    #habitacion {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--verde-oscuro);
+        margin: 0;
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    #habitacion a{
+        text-decoration: none;
+    }
+
+    .info_habitacion {
+        width: 100%;
+        height: 250px;
+    }
+
+    .info_habitacion h3 {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .info_habitacion table {
+        width: 80%;
+        border-collapse: collapse;
+        white-space: nowrap;
+        margin-top: 20px;
+        padding: 0px;
+    }
+
+    .info_habitacion table thead td {
+        font-size: 15px;
+        padding: 0px;
+    }
+
+    .info_habitacion table tbody tr td {
+        padding: 0.1rem 0rem;
+    }
+
+    .info_habitacion table tbody td {
+        font-size: 12px;
+    }
+
+    .info_habitacion table td {
+        width: 5%;
+        text-align: center;
+    }
+
+    .info_habitacion h4 {
+        font-size: 15px;
+        left: 12%;
+        top: 60%;
+    }
+
+    .comodidades {
+        left: 12%;
+        top: 75%;
+        display: flex;
+    }
+    
+    .comodidades .material-symbols-outlined {
+        font-size: 1rem;
+        margin-right: 5px;
+    }
+
+    .comodidades h5 {
+        margin-right: 15px;
+        font-size: 11px;
+    }
+
+    .comodidades .btn {
+        display: none;
+        margin-left: 0;
+    }
+
+    .btn-mobile{
+        display: flex;
+        margin-bottom: 50px;
+    }
+
+    .btn-mobile:hover{
+        color: var(--verde-oscuro);
+        background-color: var(--blanco-bg);
+    }
+
+    #hab_img_contenedor {
+        display: flex;
+        margin: 1rem 0;
+        position: relative;
+        top: 0;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .hab_img-derecha {
+        align-items: flex-start;
+        width: 100%;
+        flex-direction: column;
+        margin-top: 20%;
+    }
+
+    .hab_img-derecha strong {
+        margin: 5px;
+        font-size: 1.3rem;
+        text-align: start;
+    }
+
+    .hab_img-derecha p {
+    text-align: start;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    margin-right: 5%;
+    }
+
+    .hab_img-fixed {
+    position: absolute;
+    top: 0;
+    height: 0;
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+    }
+
+    .hab_img-fixed span {
+    font-size: 1.5rem;
+    color: var(--verde-oscuro);
+    text-transform: uppercase;
+    }
+
+    #otras_hab{
+        padding: 0;
+    }
+    
+    #otras_hab h3 {
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+
+    .cards_contenedor {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 70px;
+        margin-top: 30px;
+        flex-direction: column;
+    }
+
+    
+
+}
